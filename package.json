@@ -1,0 +1,21 @@
+{
+  "description": "Tool for managing haibu",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "flatiron": "0.3.4",
+    "flatiron-cli-config": "~0.1.4",
+    "eyes": "~0.1.8"
+  },
+  "devDependencies": {
+    "cli-easy": "0.1.0",
+    "vows": "0.6.1"
+  },
+  "scripts": {
+    "test": "vows --spec",
+    "start": "node app.js"
+  },
+  "homepage": "",
+  "name": "maga",
+  "author": "Nikolas Lahtinen"
+}
