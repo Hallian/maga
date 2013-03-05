@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 var flatiron = require('flatiron'),
-    haibu = require("haibu-api")
+    haibu = require("haibu-api"),
     path = require('path'),
     maga = module.exports = flatiron.app;
 

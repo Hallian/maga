@@ -7,7 +7,8 @@
     "flatiron-cli-config": "~0.1.4",
     "eyes": "~0.1.8",
     "request": "~2.14.0",
-    "utile": "~0.1.7"
+    "utile": "~0.1.7",
+    "vows": "~0.7.0"
   },
   "devDependencies": {
     "cli-easy": "0.1.0",
