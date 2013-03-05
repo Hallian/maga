@@ -1,16 +1,22 @@
 #!/usr/bin/node
 
 var flatiron = require('flatiron'),
+    haibu = require("haibu-api")
     path = require('path'),
-    app = flatiron.app;
+    maga = module.exports = flatiron.app;
 
-app.config.file({ file: path.join(__dirname, 'config', 'config.json') });
+maga.config.file({ file: path.join(__dirname, 'config', 'config.json') });
 
-app.use(flatiron.plugins.cli, {
+maga.use(flatiron.plugins.cli, {
   source: path.join(__dirname, 'lib', 'commands'),
-  usage: 'Empty Flatiron Application, please fill out commands'
+  usage: 'Manage Haibu processes'
 });
 
-app.use(require('flatiron-cli-config'));
+maga.use(require('flatiron-cli-config'));
 
-app.start();
+maga.haibu = haibu.createClient({
+  host: maga.config.host,
+  port: maga.config.port
+}).drone;
+
+maga.start();
